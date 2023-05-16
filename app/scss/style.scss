@@ -18,7 +18,7 @@
     display: flex;
   }
 
-  &__list-link{
+  &__list-link {
     @extend %rubik-500;
     font-size: 15px;
     line-height: 12px;
@@ -102,6 +102,97 @@
 
   &__inner .user-nav__link:first-child {
     margin-right: 50px;
+  }
+}
+
+.footer {
+  padding-top: 70px;
+  background-color: #fff;
+}
+
+.footer-top {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #dae4e9;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+  }
+
+  &__item-contact {
+    width: 190px;
+  }
+
+  &__title{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 3;
+    margin-bottom: 10px;
+    color: #1f2044;
+  }
+
+  &__addres,
+  &__phone,
+  &__email {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__logo {
+    margin-bottom: 28px;
+  }
+
+  &__item-service {
+    width: 160px;
+  }
+
+  &__item-account {
+    width: 100px;
+  }
+
+  &__item-form {
+    width: 308px;
+  }
+  &__text{
+    margin-bottom: 35px;
+  }
+  &__input{
+    padding: 15px 10px;
+    border: none;
+    background-color: $bodily;
+    &::placeholder {
+        color: #234969;
+        font-size: 14px;
+        @extend %dmsans-400;
+      }
+  }
+  &__btn{
+    margin-left: -5px;
+    padding: 15px 13px;
+    border: none;
+    background-color: #a3bbc8;
+    color: #fff;
+    font-size: 15px;
+    @extend %dmsans-400;
+    cursor: pointer;
+  }
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0;
+  &__coopy,
+  &__link{
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 32px;
+    color: #7b7b7b;
   }
 }
 
