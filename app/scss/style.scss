@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'global';
+@import 'libs';
 @import 'reset';
 
 .header {
@@ -17,12 +18,16 @@
   &__list {
     display: flex;
   }
-
+  
   &__list-link {
     @extend %rubik-500;
     font-size: 15px;
     line-height: 12px;
     color: $text;
+    transition: all .3s;
+    &:hover{
+      color: $peach;
+    }
   }
 
   &__list-item+.menu__list-item {
@@ -193,6 +198,64 @@
     font-size: 14px;
     line-height: 32px;
     color: #7b7b7b;
+  }
+}
+
+.top-slider{
+  padding: 220px 0 60px;
+  background-image: url(../images/top-slider-bg.jpg);
+  &__item{
+    display: flex !important;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 20px;
+  }
+  &__content{
+    max-width: 525px;
+  }
+  &__title{
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $text;
+    max-width: 365px;
+    margin-bottom: 40px;
+  }
+  &__button{
+    padding: 25px 18px 20px 25px;
+    background-color: $default;
+    color: #fff;
+    span{
+      padding-left: 58px;
+    }
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 195px;
+    li{
+      padding: 0 6px;
+      button{
+        padding: 13px;
+        font-size: 11px;
+        line-height: 8px;
+        background-color: #fde3cc;
+        border: none;
+        border-radius: 50%;
+      }
+      &.slick-active{
+        button{
+          background-color: #fff;
+        }
+      }
+    }
   }
 }
 
