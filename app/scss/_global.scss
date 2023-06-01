@@ -31,3 +31,11 @@ a{
   color: $default;
 }
 
+.title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: auto;
+  color: #191919;
+  text-align: center;
+}
+
