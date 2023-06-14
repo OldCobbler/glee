@@ -4,7 +4,7 @@ $peach: #fcd7b6;
 $bodily: #fef7f0;
 
 
-%rubik-400{
+%rubik-400 {
   font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
 }
@@ -27,4 +27,12 @@ $bodily: #fef7f0;
 %dmsans-700 {
   font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
+}
+
+%checkbox {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
