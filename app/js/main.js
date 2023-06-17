@@ -6,6 +6,12 @@ $(function(){
     readOnly: true
   });
 
+  $(".products-content-list__star").rateYo({
+    starWidth: "18px",
+    readOnly: true,
+    ratedFill: "#ffcc00"
+  });
+
   $('.products-price__input').ionRangeSlider({
     type: "double",
     prefix: "$",
