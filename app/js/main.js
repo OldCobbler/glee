@@ -6,6 +6,15 @@ $(function(){
     slidesToScroll: 1
   });
 
+  $('.contacts__box-link').on('click', function(e){
+    e.preventDefault();
+    $('.contacts__box-link').removeClass('contacts__box-link--active');
+    $(this).addClass('contacts__box-link--active');
+
+    $('.contacts-content__item').removeClass('contacts-content__item--active');
+    $($(this).attr('href')).addClass('contacts-content__item--active');
+  });
+
   $('.detalis-tabs__top-link').on('click', function(e){
     e.preventDefault();
     $('.detalis-tabs__top-link').removeClass('detalis-tabs__top-link--active');
