@@ -15,6 +15,10 @@
 }
 
 .menu {
+  &__btn {
+    display: none;
+  }
+
   &__list {
     display: flex;
   }
@@ -67,9 +71,9 @@
   }
 
   &__inner {
+    position: relative;
     display: flex;
     margin: 0 20px;
-    position: relative;
     border: 1px solid #fcd7b6;
     border-radius: 25px;
     background-color: #fcd7b6;
@@ -130,6 +134,7 @@
     display: flex;
     justify-content: space-between;
     vertical-align: middle;
+    flex-wrap: wrap;
   }
 
   &__item-contact {
@@ -646,7 +651,6 @@
     font-size: 12px;
     line-height: 30px;
     max-width: 313px;
-    width: 100%;
     margin-left: 30px;
     border-top: 1px solid #9b9b9b;
     padding-top: 15px;
@@ -924,6 +928,12 @@
   grid-template-columns: 270px 270px 270px;
   grid-column-gap: 40px;
   grid-row-gap: 30px;
+}
+
+.products {
+  &__inner-btn {
+    display: none;
+  }
 }
 
 .pagination {
@@ -1922,15 +1932,93 @@
   .comments-form__input::before {
     left: 262px;
   }
-  
-  &__item{
+
+  &__item {
     display: none;
   }
-  &__item--active{
+
+  &__item--active {
     display: flex;
     justify-content: space-between;
   }
 }
+
+
+
+
+@media(max-width: 1200px) {
+  .detalis {
+    padding: 0 15px;
+  }
+
+  .detalis-one {
+    &__content {
+      margin-left: 20px;
+    }
+  }
+}
+
+
+@media(max-width: 950px) {
+  .detalis-slider {
+    &__thumb {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 750px) {
+  .detalis-one {
+    &__inner {
+      flex-direction: column;
+    }
+  }
+}
+
+@media(max-width: 600px) {
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+
+  .detalis-slider {
+    &__big-item {
+      max-width: 280px;
+    }
+    &__big{
+      max-width: 280px;
+    }
+  }
+
+  .detalis-one {
+    &__title {
+      font-size: 32px;
+    }
+  }
+
+  .detalis-slider {
+    width: 10px;
+  }
+
+  .detalis-tabs {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__top-link {
+      margin-bottom: 10px;
+    }
+  }
+
+
+  .products {
+    &__item {
+      max-width: 250px;
+    }
+  }
+}
+
 
 .jq-number {
   padding: 0 15px 0 0;

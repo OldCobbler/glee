@@ -1,12 +1,45 @@
-$(function(){
+$(function () {
+
+  $('.menu__btn').on('click', function () {
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
+  $('.products__inner-btn').on('click', function () {
+    $('.products-filter').toggleClass('products-filter__active');
+  });
 
   $('.detalis-related__items').slick({
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
-  $('.contacts__box-link').on('click', function(e){
+  $('.contacts__box-link').on('click', function (e) {
     e.preventDefault();
     $('.contacts__box-link').removeClass('contacts__box-link--active');
     $(this).addClass('contacts__box-link--active');
@@ -15,7 +48,7 @@ $(function(){
     $($(this).attr('href')).addClass('contacts-content__item--active');
   });
 
-  $('.detalis-tabs__top-link').on('click', function(e){
+  $('.detalis-tabs__top-link').on('click', function (e) {
     e.preventDefault();
     $('.detalis-tabs__top-link').removeClass('detalis-tabs__top-link--active');
     $(this).addClass('detalis-tabs__top-link--active');
@@ -44,9 +77,17 @@ $(function(){
     asNavFor: '.detalis-slider__thumb',
     draggable: false,
     arrows: false,
-    fade: true
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 950,
+        settings: {
+          draggable: true
+        }
+      }
+    ]
   });
-  
+
   $(".star").rateYo({
     starWidth: "12px",
     readOnly: true
@@ -80,6 +121,6 @@ $(function(){
 
   var mixer = mixitup('.products__items ');
   var mixer = mixitup('.design__content ');
-  
+
 
 });
